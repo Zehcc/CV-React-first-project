@@ -1,0 +1,60 @@
+@import './base/mixins.scss';
+@import './base/variables.scss';
+@import '../components/Hero/_hero';
+@import '../components/Footer/_footer';
+@import '../components/About/_about';
+@import './base/page.scss';
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital@1&display=swap');
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #242629;
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+.App {
+  text-align: center;
+  background-color: #242629;
+  color: #94a1b2; 
+  display: flex;
+  flex-direction: column;
+  .icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 25px 10px;
+    img {
+      width: 75px;
+      @include tablet {
+        width: 100px;
+      }
+    }
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  margin: 10px 0;
+  @include tablet {
+    font-size: 22px;
+  }
+}
+
+h3 {
+  margin: 18px 0 10px 0;
+  @include tablet {
+    font-size: 28px;
+  }
+}
