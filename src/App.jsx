@@ -11,7 +11,7 @@ import Footer from "./components/Footer/Footer";
 
 function App() {
   const {hero, about, studies, experience, languages, others } = CV;
-  const [page, setPage] = useState("")
+  const [page, setPage] = useState(null)
 
   return (
     <div className="App">
@@ -26,15 +26,11 @@ function App() {
       <img onClick={()=>setPage('others')} src="./Assets/others.png" alt="" />
       </div>
       <div className="pageContainer">
-        { page === "studies" ? (
-          <Studies close = {()=> setPage("")} studies= {studies}/>
-        ) : page === "experience" ? (
-          <Experience close = {()=> setPage("")} experience= {experience}/>
-        ) : page === "languages" ? (
-          <Languajes close = {()=> setPage("")} languages= {languages}/>
-        ) : page === "others" ? (
-          <Others close = {()=> setPage("")} others= {others}/>
-        ) : ""    
+        { page === "studies" ? <Studies close = {()=> setPage(null)} studies= {studies}/>
+         : page === "experience" ? <Experience close = {()=> setPage(null)} experience= {experience}/>
+         : page === "languages" ? <Languajes close = {()=> setPage(null)} languages= {languages}/>
+         : page === "others" ? <Others close = {()=> setPage(null)} others= {others}/>
+         : null    
         } 
       </div>
       <Footer email={"mailto:" + hero.email} github={hero.gitHub} linkedin = {hero.linkedin}/>
