@@ -8,7 +8,7 @@ export const CV = {
         phone: "123456789",
         image: "https://www.pngkit.com/png/full/249-2495932_php-mysql-development-and-much-more-web-developer.png",
         gitHub: "https://github.com/Zehcc",
-        linkedin: "https://es.linkedin.com/"
+        linkedin: "https://www.linkedin.com/in/tomassanchezmedina/"
     },
     about: 
         {
